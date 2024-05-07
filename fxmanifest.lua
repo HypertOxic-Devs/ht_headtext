@@ -1,10 +1,18 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Elio'
-description '/me command but it\'s 3D printed'
-version '3.0'
+author 'Stan'
+description 'Commands to display text above your head'
+version '1.0'
 
-shared_script 'config.lua'
+shared_script '@ox_lib/init.lua'
+
 client_script 'client.lua'
-server_script 'server.lua'
+
+server_scripts {
+    'server.lua',
+    'config.lua'
+}
+
+use_experimental_fxv2_oal 'yes'
+lua54 'yes'
